@@ -74,6 +74,16 @@ const switchValues = (event) => {
 
     aSwitchedValues.innerText = a;
     bSwitchedValues.innerText = b;
+    
+    let index = 0;
+    const unhideDiv = () => {
+        if (index < divs.length) {
+            divs[index].hidden = false; 
+            index++;
+            setTimeout(unhideDiv, 1000); 
+        }
+    };
+    setTimeout(unhideDiv, 1000);
 };
 
 form.addEventListener('submit', switchValues);
