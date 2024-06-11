@@ -1,0 +1,14 @@
+#a:before {
+    content: "a: ";
+}
+
+#b:before {
+    content: "b: ";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
