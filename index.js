@@ -1,21 +1,21 @@
 const form = document.querySelector('form');
 const divs = document.querySelectorAll('div');
 
-valuesDiv = document.querySelector('.values');
-aValues = document.querySelector('.values > #a');
-bValues = document.querySelector('.values > #b');
+const valuesDiv = document.querySelector('.values');
+const aValues = document.querySelector('.values > #a');
+const bValues = document.querySelector('.values > #b');
 
-binaryValuesDiv = document.querySelector('.binary-values');
-aBinaryValues = document.querySelector('.binary-values > #a');
-bBinaryValues = document.querySelector('.binary-values > #b');
+const binaryValuesDiv = document.querySelector('.binary-values');
+const aBinaryValues = document.querySelector('.binary-values > #a');
+const bBinaryValues = document.querySelector('.binary-values > #b');
 
 
 divs.forEach((div) => div.hidden = true);
 
 const switchValues = (event) => {
     event.preventDefault();
-    a = Number(event.target.a.value);
-    b = Number(event.target.b.value);
+    let a = Number(event.target.a.value);
+    let b = Number(event.target.b.value);
     aValues.innerText = a;
     bValues.innerText = b;
     a = a.toString(2);
