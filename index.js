@@ -17,6 +17,14 @@ const secondXorDiv = document.querySelector('.second-xor');
 const aSecondXor = document.querySelector('.second-xor > #a');
 const bSecondXor = document.querySelector('.second-xor > #b');
 
+const thirdXorDiv = document.querySelector('.third-xor');
+const aThirdXor = document.querySelector('.third-xor > #a');
+const bThirdXor = document.querySelector('.third-xor > #b');
+
+const switchedValuesDiv = document.querySelector('.switched-values');
+const aSwitchedValues = document.querySelector('.switched-values > #a');
+const bSwitchedValues = document.querySelector('.switched-values > #b');
+
 divs.forEach((div) => div.hidden = true);
 
 const xor = (x, y) => {
@@ -50,6 +58,22 @@ const switchValues = (event) => {
 
     aFirstXor.innerText = a;
     bFirstXor.innerText = b;
+
+    b = xor(a, b);
+
+    aSecondXor.innerText = a;
+    bSecondXor.innerText = b;
+
+    a = xor(a, b);
+
+    aThirdXor.innerText = a;
+    bThirdXor.innerText = b;
+
+    a = parseInt(a, 2);
+    b = parseInt(b, 2);
+
+    aSwitchedValues.innerText = a;
+    bSwitchedValues.innerText = b;
 };
 
 form.addEventListener('submit', switchValues);
